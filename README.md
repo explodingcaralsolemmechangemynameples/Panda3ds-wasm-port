@@ -18,7 +18,7 @@ python3 serve.py
 ## Credits
 
 - **Emulator core / original wasm target:** [Panda3DS](https://github.com/wheremyfoodat/Panda3DS) by wheremyfoodat & contributors (GPL-3.0)
-- **Web shell optimizations, packaging, README:** Grok (xAI) and opencode
+- **"optimizing" Just made it load faster and like 2-3 extra frames >:(, packaging, README:** Grok (xAI) and opencode
 
 See `web-release/README.md` for performance notes, file list, rebuild steps, and full attribution.
 
