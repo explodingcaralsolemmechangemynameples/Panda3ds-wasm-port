@@ -1,27 +1,43 @@
-# Panda3DS WebAssembly — talking bout sum "optimized release" bih dis shit barely works 
+# Panda3DS WebAssembly — clean package
 
-This archive contains:
+Stripped build-wasm folder: runtime only, no CMake/ninja/object junk.
 
-| Path | Contents |
-|------|----------|
-| `web-release/` | Ready-to-host optimized wasm build (open `index.html` via `python3 serve.py`) |
-| `Panda3DS-master-src.zip` | Full upstream Panda3DS source tree this wasm binary was built from |
+```
+public/          # what you host
+  Alber.js
+  Alber.wasm
+  index.html
+  serve.py
+docs/            # notes
+README.md
+LICENSE
+```
 
-## Quick run
+## Run
 
 ```bash
-cd web-release
+cd public
 python3 serve.py
-# open http://127.0.0.1:8000
+# http://127.0.0.1:8000
 ```
+
+Drop a decrypted `.3ds` / `.cci` / `.cxi` / `.app`, click Start. Press **F** to copy the FPS log.
+
+## What was removed
+
+From the raw `build-wasm` tree (~664 files / build intermediates):
+
+- `CMakeFiles/`, `*.o`, `*.a`, `build.ninja`, `.ninja_*`, `CMakeCache.txt`
+- `third_party/` static libs and cmake crumbs
+- `autotest/`, screenshot dumps, `profile.cpuprofile`, fuzz binaries
+- `Alber.js.bak`, accel probe HTML/GLSL test pages
+- `__cmrc*` generated intermediates
+
+Left: the wasm binary, JS loader, host page, and a tiny static server.
 
 ## Credits
 
-- **Emulator core / original wasm target:** [Panda3DS](https://github.com/wheremyfoodat/Panda3DS) by wheremyfoodat & contributors (GPL-3.0)
-- **"optimizing" Just made it load faster and like 2-3 extra frames >:(, packaging, README:** Grok (xAI) and opencode
+- Emulator: [Panda3DS](https://github.com/wheremyfoodat/Panda3DS) (GPL-3.0) by wheremyfoodat & contributors
+- Clean packaging: Grok (xAI) and opencode
 
-See `web-release/README.md` for performance notes, file list, rebuild steps, and full attribution.
-
-## License
-
-GPL-3.0 — same as upstream Panda3DS. Source is included so the release stays compliant.
+Source for the binary: upstream repo linked above. No need to re-ship the full tree for a host-only drop.
