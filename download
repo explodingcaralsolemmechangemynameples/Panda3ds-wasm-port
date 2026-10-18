@@ -1,0 +1,29 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Local ROMs / saves (never commit)
+*.3ds
+*.cci
+*.cxi
+*.app
+*.zcci
+*.sav
+/data/
+/roms/
+
+# Build artifacts if someone rebuilds in-tree
+build-wasm/
+*.o
+*.a
+CMakeCache.txt
+CMakeFiles/

@@ -1,0 +1,18 @@
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+
+This package redistributes Panda3DS (https://github.com/wheremyfoodat/Panda3DS),
+which is licensed under the GNU General Public License v3.0.
+
+The optimized web shell (index.html, serve.py) and packaging in this release
+are also provided under GPL-3.0 for consistency with the emulator they host.
+
+Full text of the GNU GPL v3:
+https://www.gnu.org/licenses/gpl-3.0.txt
+
+Upstream Panda3DS copyright and authors: see the original repository.
+Web release performance work: Grok (xAI) and opencode — see README.md Credits.
