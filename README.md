@@ -1,4 +1,4 @@
-# Panda3DS WebAssembly — Optimized Release (full package)
+# Panda3DS WebAssembly — talking bout sum "optimized release" bih dis shit barely works 
 
 This archive contains:
 
